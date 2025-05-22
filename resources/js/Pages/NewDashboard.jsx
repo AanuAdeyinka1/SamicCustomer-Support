@@ -31,10 +31,10 @@ const { title, description, status } = issue;
                                 {auth.user ? (
                                     
                                     <Link
-                                        href={route('dashboard')}
+                                        href={route('adminDashboard')}
                                         className="bg-green-400 flex justify-center mt-8 rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-gray-100 dark:hover:text-white/80 dark:focus-visible:ring-white"
                                     >
-                                     Back to Dashboard
+                                     View your issues
                                     </Link>
                                 ) : (
                                     <div className="flex flex-row gap-2 ml-10 mt-10">

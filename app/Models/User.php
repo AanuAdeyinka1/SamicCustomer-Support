@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Models;
+use App\Models\Issues;
+use App\Models\Reply;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -22,6 +24,15 @@ class User extends Authenticatable
         'email',
         'password',
     ];
+public function issues()
+    {
+        return $this->hasMany(Issues::class);
+    }
+    public function replies()
+    {
+        return $this->hasMany(Reply::class);
+    }
+
 
     /**
      * The attributes that should be hidden for serialization.
@@ -45,4 +56,6 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+
 }
